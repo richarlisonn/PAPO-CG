@@ -1,0 +1,147 @@
+/* Reset básico para margens e preenchimentos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilização do corpo */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilização do cabeçalho */
+header {
+  background-color: #53738d; 
+  padding: 10px 20px;
+} 
+
+/* Estilização da barra de navegação */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Estilização do logotipo */
+.logo-text {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.logo-text span {
+  color: #000000; 
+}
+
+/* Estilização do botão do ícone do menu */
+.menu-icon {
+  display: flex;
+  align-items: center;
+  position: relative; /* Necessário para o posicionamento absoluto do pseudo-elemento */
+}
+
+.button-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.button-icon:hover {
+  opacity: 0.8;
+}
+
+/* Adiciona uma bolinha de animação ao passar o mouse */
+.button-icon::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; 
+  left: 50%;
+  top: 2px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none; 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilização do menu */
+.menu-opcoes {
+  display: none;
+  position: absolute;
+  top: 41px;
+  right: 0;
+  width: 40%;
+  background-color: #53738d;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-out, max-height 0.5s ease-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-opcoes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.menu-opcoes ul li {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.menu-opcoes ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.menu-opcoes ul li a:hover {
+  color: #d1d1d1;
+}
+
+/* Classe para mostrar o menu */
+.menu-show {
+  display: flex;
+  max-height: 500px; /* Ajuste conforme necessário */
+  opacity: 1;
+}
+
+/* Estilização geral para as seções de conteúdo */
+.content-section {
+  display: none; /* Oculta todas as seções por padrão */
+  padding: 20px;
+  background-color: #f5f5f5;
+  margin: 10px 0;
+}
+
+/* Mostrar a seção ativa */
+.content-show {
+  display: block;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-opcoes {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    top: 50px; /* Ajuste conforme necessário */
+  }
+}

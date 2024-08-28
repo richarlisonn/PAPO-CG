@@ -3,42 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site oficial do PAPO CG, sua fonte para esportes, eventos, notícias e muito mais.">
   <title>PAPO CG</title>
   <link rel="stylesheet" href="assets/css/index.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <header>
-    <!-- Cabeçalho -->
-    <nav class="nav-bar">
-      <!-- Logo site -->
-      <div class="logo">
-        <img src="assets/img/Logo.png" alt="logo">
+    <nav class="nav">
+      <!-- LOGO -->
+      <h1 class="logo-text">PAPO <span>CG</span></h1>
+      <!-- MENU ICON -->
+      <div class="menu-icon" id="menu-icon">
+        <button class="button-icon">
+          <i class='bx bx-menu'></i>
+        </button>
       </div>
-        <div class="logo-text">
-          <h1>
-            PAPO <span>CG</span>
-          </h1>
-        </div>
-        <!-- Menu de navegação -->
-        <div class="nav-menu">
-          <ul>
-            <li>
-              <a href="#">Home</a>
-              <a href="#">Esportes</a>
-              <a href="#">Eventos</a>
-              <a href="#">Notícias</a>
-              <a href="#">Contato</a>
-              <a href="#">Sobre Nós</a>
-            </li>
-          </ul>
-        </div>
-        <!-- Menu ícone -->
-        <div class="menu-icon">
-          <button><i class='bx bx-menu'></i></button>
-        </div>
+      <!-- MENU -->
+      <div class="menu-opcoes" id="menu-opcoes">
+        <ul>
+          <li><a href="#" data-target="home">HOME</a></li>
+          <li><a href="#" data-target="esportes">ESPORTES</a></li>
+          <li><a href="#" data-target="eventos">EVENTOS</a></li>
+          <li><a href="#" data-target="noticias">NOTÍCIAS</a></li>
+          <li><a href="#" data-target="sobre-nos">SOBRE NÓS</a></li>
+          <li><a href="#" data-target="contato">CONTATO</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
+
+  <!-- Conteúdos das seções -->
+  <section id="home" class="content-section">Conteúdo de Home</section>
+  <section id="esportes" class="content-section">Conteúdo de Esportes</section>
+  <section id="eventos" class="content-section">Conteúdo de Eventos</section>
+  <section id="noticias" class="content-section">Conteúdo de Notícias</section>
+  <section id="sobre-nos" class="content-section">Conteúdo Sobre Nós</section>
+  <section id="contato" class="content-section">Conteúdo de Contato</section>
+
+
+  <script src="assets/js/index.js"></script>
 </body>
-<script src="assets/js/index.js"></script>
 </html>
